@@ -29,7 +29,7 @@ export class News extends Component {
             page:1,
             totalResults:0
         }
-        document.title = `${this.capitalFirstLetter(this.props.category)}- News Monkey`;
+        document.title = `${this.capitalFirstLetter(this.props.category)}- News Wire`;
     }
     async updateNews(){
       this.props.setProgress(10);
@@ -85,7 +85,7 @@ export class News extends Component {
     console.log("render")
     return (
       <div className="container my-3">
-        <h2 className="text-center"> NewsMonkey - Top Headlines on {this.capitalFirstLetter(this.props.category)} category</h2>
+        <h2 className="text-center"> News Wire - Top Headlines on {this.capitalFirstLetter(this.props.category)} category</h2>
         {this.state.loading && <Spinner/>} 
         <InfiniteScroll
         dataLength={this.state.articles.length}
